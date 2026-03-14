@@ -1,0 +1,14 @@
+first use npm init then install all the packages 
+follow npm i npm i  express, npm i mongoose, npm i bcrypt for hashed password 
+
+create app.js then define port or you can use .env then first create config/dbconfig.js where you define your database 
+then create models where you define user schema then services where you define a createUser methods and password is hashed here only 
+
+then you create a controllers which is responsisble for request making to the db and response pulling from the database as well where you again create a createUser function
+this controllers are defined for the proper communication back and forth with the database 
+then you define router where you create a route for registration that the user can use 
+then you call the same routes defined in the routes in the app.js where body parse is used for json parsing and also the user is defined that can use the routes to create user in the postman 
+
+
+npm i cors 
+npm install jsonwebtoken
