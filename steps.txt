@@ -12,3 +12,21 @@ then you call the same routes defined in the routes in the app.js where body par
 
 npm i cors 
 npm install jsonwebtoken
+
+
+for product creation through admin side in this 
+first npm i multer for image upload features 
+
+second step is to update .env files for the image upload where you need to upload you image upload paths with creations 
+of uploads folder 
+
+now create a product models in the models 
+after creating a product model 
+next create an admin middleware so that products can only be created by admin 
+
+after this create products services in services 
+then go to controller and create a product controller 
+
+controller paxi routes mai upload ko lagi define garney for shoesImage, and define different routes to use 
+
+tes paxi app.js ma update 
