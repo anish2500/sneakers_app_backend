@@ -3,6 +3,7 @@ const multer = require("multer");
 const productController = require("../controllers/product");
 
 const {authenticateAdmin} = require("../middleware/adminAuth");
+const {authenticateCustomer} = require("../middleware/customerAuth");
 
 const router = express.Router();
 
@@ -18,9 +19,9 @@ const upload = multer({storage});
 
 router.post("/create-product", authenticateAdmin, upload.single("shoesImage"), productController.createProduct);
 
-router.get("/get", productController.getAllProducts);
+router.get("/get", authenticateCustomer, productController.getAllProducts);
 
-router.get("/getById/:id", productController.getProductById);
+router.get("/getById/:id", authenticateCustomer,  productController.getProductById);
 
 router.put("/updateById/:id", authenticateAdmin, productController.updateProduct);
 router.delete("/deleteById/:id", authenticateAdmin, productController.deleteProduct);
