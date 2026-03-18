@@ -15,7 +15,7 @@ app.use(bodyParser.json());
 app.use('/user', signupRoute);
 app.use('/user', loginRoute);
 app.use('/product', productRoute);
-app.use('/uploads', express.static(path.join(__dirname, './uploads')));
+app.use('/uploads', express.static(path.join(__dirname, '../uploads')));
 
 app.listen(PORT, ()=>{
     console.log(`Server is running on http://localhost:${PORT}`);
